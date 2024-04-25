@@ -61,7 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(resposne => response.json())
                 .then(updatedBook => {
                     showBookDetails(upodatedBook);
-                })
+                });
+        } else {
+            alert('You have already liked this book.');
         }
     }
+
+    //Initial fetch of books 
+    fetchBooks();
 });
